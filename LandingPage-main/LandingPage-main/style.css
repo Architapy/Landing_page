@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text: 1.5rem;
+    --head:calc(1rem + 2.5vw);
+}
+body{
+    font-family: 'Roboto Slab', serif;
+    font-weight:bold;
+}
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(black, transparent),  url("img/img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: slide 1s ease-in-out;
+}
+@keyframes slide {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    transform: translateY(-100%);
+    animation: movedown 850ms ease-in 1s forwards;
+}
+
+
+.navbar ul {
+    list-style: none;
+} 
+@keyframes movedown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+.navbar ul li {
+    display: inline-block;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    font-size: var(--text);
+    
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul li a:hover{
+    text-decoration: none;
+    color: #ffeaa7;
+    border-bottom: 2px solid #ffeaa7;
+}
+
+.navbar h2{
+    margin: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-text{
+    color: white;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.hero-text a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+    background-color: #636e7e;
+    padding: 0.8rem 1rem;
+    font-weight: 900;
+    margin: 0.8rem auto;
+    display: block;
+    transition: opacity 250ms linear;
+
+}
+.hero-text a:hover{
+    opacity: 0.8;
+    font-size: 1.2rem;
+}
+
+.hero-text h1{
+    font-size: var(--head);
+    margin-top: 4rem;
+    font-weight: bold;
+}
